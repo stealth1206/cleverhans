@@ -342,7 +342,7 @@ def l2_batch_normalize(x, epsilon=1e-12, scope=None):
 
 
 def kl_with_logits(p_logits, q_logits, scope=None,
-                   loss_collection=tf.GraphKeys.REGULARIZATION_LOSSES):
+                   loss_collection=tf.compat.v1.GraphKeys.REGULARIZATION_LOSSES):
   """Helper function to compute kl-divergence KL(p || q)
   """
   with tf.name_scope(scope, "kl_divergence") as name:
